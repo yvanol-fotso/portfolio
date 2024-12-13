@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>FOTSO's Portfolio</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+      <!-- Lien vers le favicon -->
+      <link rel="icon" href="images/cm.jpg" type="image/x-icon">
+
+     <!-- Lien vers les icônes Bootstrap -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+     <!--lien pour les icon de social media-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+     <!-- modal -->
+
+     <!-- Lien vers le fichier CSS de Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- Lien vers le fichier JavaScript de Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/main-style.css">
+     <style>
+       
+
+   .carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapte l'image en coupant les bords si nécessaire pour remplir le conteneur */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 2.5s ease; /* Ajoute une transition pour le fondu */
+}
+
+  </style>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50" onload="showLoader(),GenererCarrousel();">
+
+    <!-- Effet de chargement -->
+    <div class="loader" id="loadingScreen">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand bio-name" href="#">
+                FOTSO Bio
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#intro" class="nav-link ">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link ">About Me</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#skills" class="nav-link ">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#projects" class="nav-link ">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#conferences" class="nav-link ">Conferences</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#publications" class="nav-link ">Publications</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="#design" class="nav-link ">Design</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                      <a href="#certifications" class="nav-link ">Certifications</a>
+                    </li>
+          
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+<!-- HERO -->
+<section class="hero d-flex flex-column justify-content-center align-items-center mt-5" id="intro">
+    <div class="container">
+        <div class="row align-items-center">
+           
+            <div class="col-lg-6 col-md-6 col-12">
+                <div id="carousel" class="carousel-container border border-secondary rounded shadow" style="width: 100%; height: 600px;">
+                    
+                </div>
+            </div>
+  
+            <div class="col-lg-6 col-md-6 col-12 d-flex flex-column justify-content-center align-items-start">
+                <h1 class="mb-3">Welcome to My Portfolio <span style="color: red;">&#9829;</span></h1>
+                <p class="lead">I am a passionate developer with expertise in creating modern and interactive user interfaces.</p>
+                
+              <a href="cv_pdf/CV_Mr_FOTSO_TATCHUM.pdf" class="btn new-color-btn mt-3" download="YourName-CV.pdf" target="_blank">
+                Download My CV
+              </a>
+            </div>
+        </div>
+    </div>
+  </section>
+  
+
+  <section class="about section-padding" id="about">
+    <div class="container">
+        <div class="row">
+            <!-- Column with personal information on the left -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <h2 class="mb-4">About Me</h2>
+                <p class="lead">
+                    My name is <strong>Fotso Tatchum Yvanol Rosly</strong>, a developer and researcher in Artificial Intelligence, passionate about innovation and new technologies. Born on <strong>February 19, 2002</strong>, in Bandjoun, Cameroon, I am currently pursuing a PhD in Artificial Intelligence to explore innovative solutions.
+                </p>
+
+                <p>
+                    With a <strong>Master's degree in Artificial Intelligence</strong> from the University of Dschang, I specialize in creating advanced models and developing intelligent applications tailored to modern needs.
+                </p>
+
+                <ul class="mt-4 mb-5 profile-list list-unstyled">
+                    <li><strong>Full Name:</strong> Fotso Tatchum Yvanol Rosly</li>
+                    <li><strong>Location:</strong> Dschang West Region, Cameroon</li>
+                    <li><strong>Email:</strong> <a href="mailto:fotyvarosly@gmail.com">fotyvarosly@gmail.com</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column with skills on the right -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="row mt-5">
+                    <div class="col-12 d-flex align-items-start mb-4">
+                        <i class="bi bi-code-slash me-3 mt-2" style="font-size: 1.5rem;"></i>
+                        <div>
+                            <h3>Technical Expertise</h3>
+                            <p>Proficiency in programming, designing AI models, and developing modern and interactive user interfaces.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 d-flex align-items-start mb-4">
+                        <i class="bi bi-lightbulb me-3 mt-1" style="font-size: 1.5rem;"></i>
+                        <div>
+                            <h3>Research and Innovation</h3>
+                            <p>Exploring new possibilities in AI to deliver concrete and innovative solutions in scientific research.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 d-flex align-items-start">
+                        <i class="bi bi-heart me-3 mt-2" style="font-size: 1.5rem; color: red;"></i>
+                        <div>
+                            <h3>Passion and Dedication</h3>
+                            <p>Driven by a passion for new technologies, I strive to learn and apply the best practices in the field.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="skills section-padding" id="skills">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="mb-4">My Skills</h2>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- Language Skills -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="skill-box text-center border rounded shadow p-4">
+                    <i class="bi bi-globe mb-3" style="font-size: 2rem; color: #007BFF;"></i>
+                    <h4>Languages</h4>
+                    <div class="progress-bar">
+                        <span class="label">French</span>
+                        <div class="progress">
+                            <div class="progress-fill" style="width: 98%;"></div>
+                            <div class="percentage-container">98%</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <span class="label">English</span>
+                        <div class="progress">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                            <div class="percentage-container">75%</div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <span class="label">Chinese</span>
+                        <div class="progress">
+                            <div class="progress-fill" style="width: 20%;"></div>
+                            <div class="percentage-container">20%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Skills -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="skill-box text-center border rounded shadow p-4">
+                    <i class="bi bi-code-slash mb-3" style="font-size: 2rem; color: #007BFF;"></i>
+                    <h4>Programming</h4>
+                    <p>Expertise in languages such as Python, JavaScript, and more.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="skill-box text-center border rounded shadow p-4">
+                    <i class="bi bi-brush mb-3" style="font-size: 2rem; color: #28A745;"></i>
+                    <h4>UI/UX Design</h4>
+                    <p>Creating modern and interactive designs for web applications.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="skill-box text-center border rounded shadow p-4">
+                    <i class="bi bi-lightbulb mb-3" style="font-size: 2rem; color: #FFC107;"></i>
+                    <h4>Artificial Intelligence</h4>
+                    <p>Developing models for image recognition and data processing.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="skill-box text-center border rounded shadow p-4">
+                    <i class="bi bi-server mb-3" style="font-size: 2rem; color: #DC3545;"></i>
+                    <h4>Database Management</h4>
+                    <p>Mastery of SQL, NoSQL, and designing efficient databases.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="skill-box text-center border rounded shadow p-4">
+                    <i class="bi bi-people mb-3" style="font-size: 2.5rem; color: #6C757D;"></i>
+                    <h4>Collaboration</h4>
+                    <p>Ability to work efficiently in teams with modern tools.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- projetc all my projet -->
+
+<section id="projects" class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-5">My Projects</h2>
+        <div id="projects-carousel" class="carousel-container mx-auto">
+            <a id="project-link" href="" target="_blank">
+                <img id="project-image" class="carousel-image" alt="Image du projet">
+            </a>
+            <!-- Boutons de navigation -->
+            <button class="carousel-btn prev" onclick="previousProject()">&#8249;</button>
+            <button class="carousel-btn next" onclick="nextProject()">&#8250;</button>
+        </div>
+        <div class="project-details text-center mt-3">
+            <h3 id="project-title"></h3>
+            <p id="project-description"></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Conferences et evenement -->
+
+<section class="conferences section-padding" id="conferences">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="mb-4">Conferences</h2>
+            </div>
+        </div>
+
+        <!-- Affichage initial des 3 éléments de design -->
+        <div class="row" id="initial-design">
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="design-box text-center border rounded shadow p-4">
+                    <img src="images/conferences/1.png" alt="Design 1" class="img-fluid mb-3">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="design-box text-center border rounded shadow p-4">
+                    <img src="images/conferences/2.png" alt="Design 2" class="img-fluid mb-3">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="design-box text-center border rounded shadow p-4">
+                    <img src="images/conferences/3.png" alt="Design 3" class="img-fluid mb-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton Voir Plus -->
+        <div class="text-center">
+            <button class="btn new-color-btn" data-bs-toggle="modal" data-bs-target="#certModal"  onclick="loadConferencesEvent()">See More</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Publications Section -->
+<section class="publications section-padding" id="publications">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="mb-4">Publications</h2>
+            </div>
+        </div>
+
+        <!-- Initial display of 3 publications -->
+        <div class="row" id="initial-publications">
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="publication-box text-center border rounded shadow p-4">
+                    <div class="image-container mb-3">
+                        <img src="images/publications/1.png" alt="Publication 1" class="img-fluid">
+                    </div>
+                    <h5 class="mb-2">
+                          Machine Learning and Cyber Deception for
+Securing SDN from DNS Spoofing
+                    </h5>
+                    <p class="text-muted">DOI: <a href="https://doi.org/10.xxxx/example1" target="_blank">10.xxxx/01.xxxx</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="publication-box text-center border rounded shadow p-4">
+                    <div class="image-container mb-3">
+                        <img src="images/publications/2.png" alt="Publication 2" class="img-fluid">
+                    </div>
+                    <h5 class="mb-2">
+                          Machine Learning and Cyber Deception for
+Securing SDN from DNS Spoofing
+                    </h5>
+                    <p class="text-muted">DOI: <a href="https://doi.org/10.xxxx/example2" target="_blank">10.xxxx/02.xxxx</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="publication-box text-center border rounded shadow p-4">
+                    <div class="image-container mb-3">
+                        <img src="images/publications/3.png" alt="Publication 3" class="img-fluid">
+                    </div>
+                    <h5 class="mb-2">
+                          Machine Learning and Cyber Deception for
+Securing SDN from DNS Spoofing
+                    </h5>
+                    <p class="text-muted">DOI: <a href="https://doi.org/10.xxxx/example3" target="_blank">10.xxxx/03.xxxx</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- See More Button -->
+        <div class="text-center">
+            <button class="btn new-color-btn" data-bs-toggle="modal" data-bs-target="#carouselModal" onclick="loadMorePublications()">See More</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal for Additional Publications -->
+<!-- <div class="modal fade" id="pubModal" tabindex="-1" aria-labelledby="pubModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pubModalLabel">Additional Publications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="more-publications">
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <div class="publication-box text-center border rounded shadow p-4">
+                            <img src="images/publications/4.png" alt="Publication 4" class="img-fluid mb-3">
+                            <h5 class="mb-2">
+                                  Machine Learning and Cyber Deception for
+Securing SDN from DNS Spoofing
+                            </h5>
+                            <p class="text-muted">DOI: <a href="https://doi.org/10.xxxx/example4" target="_blank">10.xxxx/0.xxxx</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <div class="publication-box text-center border rounded shadow p-4">
+                            <img src="images/publications/5.png" alt="Publication 5" class="img-fluid mb-3">
+                            <h5 class="mb-2">
+                                  Machine Learning and Cyber Deception for
+Securing SDN from DNS Spoofing
+                            </h5>
+                            <p class="text-muted">DOI: <a href="https://doi.org/10.xxxx/example5" target="_blank">10.xxxx/0.xxxx</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+  <!-- La modale avec le carrousel -->
+  <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carouselModalLabel">Publications</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Le carrousel -->
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselItems">
+              <!-- Les items seront injectés dynamiquement ici -->
+            </div>
+            <!-- Boutons de navigation -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Design -->
+
+<section class="design section-padding" id="design">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="mb-4">Designs</h2>
+            </div>
+        </div>
+
+        <!-- Affichage initial des 3 éléments de design -->
+        <div class="row" id="initial-design">
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="design-box text-center border rounded shadow p-4">
+                    <img src="images/flyers/18.jpg" alt="Design 1" class="img-fluid mb-3">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="design-box text-center border rounded shadow p-4">
+                    <img src="images/flyers/19.jpg" alt="Design 2" class="img-fluid mb-3">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="design-box text-center border rounded shadow p-4">
+                    <img src="images/flyers/20.jpg" alt="Design 3" class="img-fluid mb-3">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bouton Voir Plus -->
+        <div class="text-center">
+            <button class="btn new-color-btn" data-bs-toggle="modal" data-bs-target="#certModal"  onclick="loadDesignItems()">See More</button>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Section Certifications -->
+<section class="certifications section-padding" id="certifications">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="mb-4">Certifications</h2>
+        </div>
+      </div>
+  
+      <!-- Affichage initial des 3 certifications -->
+      <div class="row" id="initial-certifications">
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="cert-box text-center border rounded shadow p-4">
+            <img src="images/certifications/1.jpg" alt="Certification 1" class="img-fluid mb-3">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="cert-box text-center border rounded shadow p-4">
+            <img src="images/certifications/2.jpg" alt="Certification 2" class="img-fluid mb-3">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="cert-box text-center border rounded shadow p-4">
+            <img src="images/certifications/3.jpg" alt="Certification 3" class="img-fluid mb-3">
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bouton Voir Plus -->
+      <div class="text-center">
+        <button class="btn new-color-btn" data-bs-toggle="modal" data-bs-target="#certModal" onclick="loadCertifications()">See More</button>
+      </div>
+    </div>
+</section>
+
+<!-- Modal avec Carrousel -->
+<div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="certModalLabel">Mes Certifications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Carrousel -->
+                <div id="certCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselItems">
+                        <!-- Les images seront injectées ici par JS -->
+                    </div>
+                    <!-- Contrôles du carrousel -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#certCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#certCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+
+<!-- Contact Section -->
+<section class="contact section-padding" id="contact">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- Contact Form -->
+            <div class="col-lg-6 col-md-7 mb-5 mb-lg-0">
+                <h2 class="mb-4">Contact Me</h2>
+                <form action="#" method="post" class="contact-form" role="form">
+                    <div class="form-group mb-4 position-relative">
+                        <input type="text" class="form-control" name="name" id="name" required>
+                        <label for="name" class="animated-placeholder">Full Name</label>
+                    </div>
+
+                    <div class="form-group mb-4 position-relative">
+                        <input type="email" class="form-control" name="email" id="email" required>
+                        <label for="email" class="animated-placeholder">Email</label>
+                    </div>
+
+                    <div class="form-group mb-4 position-relative">
+                        <textarea class="form-control" rows="4" name="message" id="message" required></textarea>
+                        <label for="message" class="animated-placeholder">Your Message</label>
+                    </div>
+
+                    <button type="submit" class="btn custom-btn">Send</button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="col-lg-5 col-md-5">
+                <h3 class="mb-4">Contact Information</h3>
+                
+                <p class="mb-3"><i class="bi bi-geo-alt-fill me-2"></i><strong>Address:</strong> Dja, Bandjoun, Cameroon</p>
+                <p class="mb-3"><i class="bi bi-telephone-fill me-2"></i><strong>Phone:</strong> +237 694122436 / +237 681927549</p>
+                <p class="mb-3"><i class="bi bi-envelope-fill me-2"></i><strong>Email:</strong> <a href="mailto:fotyvarosly@gmail.com">fotyvarosly@gmail.com</a></p>
+
+                <!-- Social Links -->
+                <ul class="social-links mt-4">
+                    <li><a href="https://github.com/" class="fab fa-github" target="_blank"></a></li>
+                    <li><a href="https://linkedin.com/" class="fab fa-linkedin" target="_blank"></a></li>
+                    <li><a href="https://twitter.com/" class="fab fa-twitter" target="_blank"></a></li>
+                    <li><a href="https://facebook.com/" class="fab fa-facebook" target="_blank"></a></li>
+                    <li><a href="https://instagram.com/" class="fab fa-instagram" target="_blank"></a></li>
+                </ul>
+
+                <p class="mt-5">© <span id="year"></span> Fotso Tatchum. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- SCRIPTS -->
+<script>
+        
+document.getElementById("year").textContent = new Date().getFullYear();
+ // Fonction qui gère le loader
+ function showLoader() {
+ // Afficher le loader pendant 5 secondes
+ setTimeout(hideLoader, 5000);
+}
+
+function hideLoader() {
+  // Cacher le loader et afficher le contenu principal
+  document.getElementById("loadingScreen").style.display = "none";
+  // document.getElementById("mainContent").style.display = "block";
+}
+
+
+
+// Initialisation dynamique de la barre de progression pour la compétence "Langues"
+window.addEventListener('DOMContentLoaded', function() {
+    const progressFills = document.querySelectorAll('.progress-fill');
+    progressFills.forEach(fill => {
+        const width = fill.style.width;
+        fill.style.width = '0%';
+        setTimeout(() => {
+            fill.style.width = width;
+        }, 200);
+    });
+});
+
+     
+     </script>
+     
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/js.js"></script>
+     <script src="js/carouselprogressif.js"></script>
+     <script src="js/BoiteModal.js"></script>
+
+</body>
+</html>
