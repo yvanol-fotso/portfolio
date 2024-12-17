@@ -31,3 +31,22 @@ function scrollToBottom(){
 
 scrollToBottom();
 
+
+function loadprogressBarLangue(){
+    
+   // Initialisation dynamique de la barre de progression pour la compétence "Langues"
+    
+    const progressFills = document.querySelectorAll('.progress-fill');
+    progressFills.forEach(fill => {
+        const width = fill.style.width;
+        fill.style.width = '0%';
+        setTimeout(() => {
+            fill.style.width = width;
+        }, 200);
+    });
+
+}
+
+
+loadprogressBarLangue();
+
