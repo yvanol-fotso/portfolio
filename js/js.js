@@ -48,5 +48,5 @@ function loadprogressBarLangue(){
 }
 
 
-loadprogressBarLangue();
+//loadprogressBarLangue(); // cette fonction empeche mon code de charger elle est mal ecrit ou mal appeller je crois a cuase du setTimeout
 
